@@ -7,6 +7,6 @@ command
 apt-get update\
 apt-get install nodejs\
 apt-get install npm\
-update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10\
+update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10 \
 
-create-react-app ./\
+create-react-app ./ \
