@@ -1,9 +1,13 @@
-import logo from './logo.svg';
+// import React,  { Component} from 'react';
 
 function App() {
-  return (
-    <div><h1>Hello world!</h1></div>
-  );
+
+  const greeting = "Hello world!";
+  const dom = <input type="text" onClick={() => {console.log("I am clicked")}} />;
+
+    return (
+        dom
+    );
 }
 
 export default App;
