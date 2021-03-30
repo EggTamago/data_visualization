@@ -10,18 +10,35 @@ import React from 'react';
 //     );
 // }
 
+
+// index.js:1 Warning: Each child in a list should have a unique "key" prop.
+// このエラーみたらkey={index}を足してあげる
 const App = () => {
+  const profiles = [
+    {name: "Taro", age:"10"},
+    {name: "Hanako", age:"0"},
+    {name: "Noname"}        
+  ]
   return (
   <div>
-    <Cat />
-    <Cat />
-    <Cat />
+    {
+    profiles.map((profiles, index) => {
+      return <User name={profiles.name} age={profiles.age} key={index}/>
+    })
+  }
   </div>
   )
 }
 
-const Cat = () => {
-  return <div>Meow!</div>
+
+// User componentに対してname, ageという属性(props)が与えられる
+const User = (props) => {
+  return <div>Hi, I am {props.name} and Im {props.age} years old!</div>
+}
+
+// propsの要素が空白の時にデフォルト入れれる
+User.defaultProps = {
+  age : 1
 }
 
 
