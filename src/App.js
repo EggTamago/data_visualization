@@ -1,4 +1,5 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 
 // function App() {
 
@@ -12,12 +13,11 @@ import React from 'react';
 
 
 // index.js:1 Warning: Each child in a list should have a unique "key" prop.
-// このエラーみたらkey={index}を足してあげる
+// このwarningみたらkey={index}を足してあげる
 const App = () => {
   const profiles = [
-    {name: "Taro", age:"10"},
-    {name: "Hanako", age:"0"},
-    {name: "Noname"}        
+    {name: "Taro", age: 10},
+    {name: "Hanako", age: 0}
   ]
   return (
   <div>
@@ -36,9 +36,11 @@ const User = (props) => {
   return <div>Hi, I am {props.name} and Im {props.age} years old!</div>
 }
 
-// propsの要素が空白の時にデフォルト入れれる
-User.defaultProps = {
-  age : 1
+// ここを使ってPropに対する型を定義する
+// isRequiredをつけた場合、ageがなければエラーになる
+User.Proptypes = {
+  name: Proptypes.string,
+  age: Proptypes.number.isRequired
 }
 
 
