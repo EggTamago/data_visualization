@@ -2,6 +2,10 @@
 
 import React, {Component} from 'react';
 
+// actionの作成
+// action = appの中で何が起きたかを示す
+
+
 // index.js:1 Warning: Each child in a list should have a unique "key" prop.
 // このwarningみたらkey={index}を足してあげる
 const App = () => {
