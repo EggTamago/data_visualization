@@ -1,3 +1,5 @@
+// yarn add redux react-redux
+
 import React, {Component} from 'react';
 
 // index.js:1 Warning: Each child in a list should have a unique "key" prop.

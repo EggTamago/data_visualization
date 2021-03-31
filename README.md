@@ -14,3 +14,6 @@
 
  props is the kind of compornent.(comportnent の属性)
 
+ Redux is one of react architecture \
+ コンポーネントの改造が大きくなった時に容易にstateを共有できる
+
