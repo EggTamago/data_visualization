@@ -1,21 +1,26 @@
-import React, { useState } from 'react'
-import ReactFileReader from 'react-file-reader';
+import React, { useEffect, useState } from 'react'
+import CSVReader from 'react-csv-reader'
 
 import './css/App.css'
 
 const App = () => {
 
   const [count, setCount] = useState(0)
+  const [time, setTime] = useState('')
 
-  const handleFiles = (files) => {
-    console.log(files)
-  //   var reader = new FileReader();
-  //   reader.onload = function(e) {
-  //   // Use reader.result
-  //   alert(reader.result)
-  //   }
-  // reader.readAsText(files[0]);
-}
+  const GetDate = () => {
+    const now = new Date()
+    const time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
+    return <p>{time}</p>
+  }
+
+  const handleForce = (data, fileInfo) => console.log(data, fileInfo)
+  const papaparseOptions = {
+    header: true,
+    dynamicTyping: true,
+    skipEmptyLines: true,
+    transformHeader: header => header.toLowerCase().replace(/\W/g, "_")
+  }
 
   return (
     <div className="App">
@@ -25,12 +30,14 @@ const App = () => {
       </div>
 
       <div>
-        <h1>csvファイル</h1>
+        <CSVReader
+          cssClass="react-csv-input"
+          label="Select CSV with secret Death Star statistics"
+          onFileLoaded={handleForce}
+          parserOptions={papaparseOptions} />
       </div>
 
-      <ReactFileReader handleFiles={handleFiles} fileTypes={'.csv'}>
-        <button className='btn'>Upload</button>
-      </ReactFileReader>
+      <GetDate />
 
     </div>
   )
