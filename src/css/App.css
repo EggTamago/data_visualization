@@ -25,3 +25,18 @@
   padding-top: 10px;
   color: #666;
 }
+
+.countArea {
+  padding: 10px;
+  margin: 15px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.timeArea {
+  padding: 10px;
+  display: block;
+  margin: 15px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
