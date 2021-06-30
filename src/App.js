@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import CSVReader from 'react-csv-reader'
+import Button from '@material-ui/core/Button';
+import DataTable from 'react-data-table-component';
 
 import './css/App.css'
 
 const App = () => {
 
   const [count, setCount] = useState(0)
-  const [time, setTime] = useState('')
+  const [time, setTime] = useState(new Date())
 
-  const GetDate = () => {
-    const now = new Date()
-    const time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
-    return <p>{time}</p>
-  }
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(new Date())
+    }, 1000)
+    return function () { clearInterval(intervalId) }
+  }, [time])
 
   const handleForce = (data, fileInfo) => console.log(data, fileInfo)
   const papaparseOptions = {
@@ -24,20 +27,26 @@ const App = () => {
 
   return (
     <div className="App">
-      <div>
+
+      <div className="countArea">
         <p>you push {count} times</p>
-        <button onClick={()=>setCount(count + 1)}>increment</button>
+        <Button onClick={() => setCount(count + 1)} variant="contained" color="primary">increment</Button>
       </div>
+
+      <div className="timeArea">
+        {time.toString()}
+      </div>
+
 
       <div>
         <CSVReader
           cssClass="react-csv-input"
-          label="Select CSV with secret Death Star statistics"
+          label="Select CSV"
           onFileLoaded={handleForce}
           parserOptions={papaparseOptions} />
       </div>
 
-      <GetDate />
+      <DataTable />
 
     </div>
   )
