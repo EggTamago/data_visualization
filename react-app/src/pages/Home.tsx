@@ -11,6 +11,15 @@ const Home = () => {
             </div>
 
             <section className='home-kind'>
+                <p>DB connection for big date</p>
+                <p>light data is no need db connection because process in only API server</p>
+                <p>data upload fuinction</p>
+                <p>show data like table with static</p>
+                <p>some graph</p>
+                <p>some analysis and create model file</p>
+            </section>
+
+            <section className='home-kind'>
                 <h2>教師あり学習</h2>
                 <p> aaaa </p>
             </section>
