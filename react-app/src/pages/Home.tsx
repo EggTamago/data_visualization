@@ -28,6 +28,8 @@ const Home = () => {
                 <h1>機械学習手法の選択</h1>
             </div>
 
+            <section> <h1>supervised</h1>  </section>
+
             <Card className={classes.root}>
                 <CardActionArea>
 
