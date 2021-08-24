@@ -13,7 +13,7 @@ import '../css/Home.css'
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
+        maxWidth: 350,
     },
 });
 
@@ -24,33 +24,36 @@ const Home = () => {
     return (
 
         <>
-            <div className='home-title'>
+            <div className='home-title '>
                 <h1>機械学習手法の選択</h1>
             </div>
 
-            <section> <h1>supervised</h1>  </section>
+            <section className="section"> <h1>supervised</h1>  </section>
 
-            <Card className={classes.root}>
-                <CardActionArea>
+            <Grid container spacing={1}>
 
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            単回帰分析
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            一番簡単な線形回帰
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                        Share
-                    </Button>
-                    <Button size="small" color="primary">
-                        Learn More
-                    </Button>
-                </CardActions>
-            </Card>
+                <Card className={classes.root}>
+                    <CardActionArea>
+
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="h2">
+                                単回帰分析
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                一番簡単な線形回帰
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small" color="primary">
+                            Share
+                        </Button>
+                        <Button size="small" color="primary">
+                            Learn More
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Grid>
         </>
     );
 }
