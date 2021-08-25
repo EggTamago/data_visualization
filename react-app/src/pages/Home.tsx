@@ -30,57 +30,81 @@ const Home = () => {
 
             <section className="section"> <h1>supervised</h1>  </section>
 
-            <Grid container spacing={1}>
+            <Grid container spacing={1} alignItems="center" justify="center">
+                <Grid item xs={3}>
+                    <Card className={classes.root}>
+                        <CardActionArea>
 
-                <Card className={classes.root}>
-                    <CardActionArea>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    単回帰分析
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    一番簡単な線形回帰
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                            <Button size="small" color="primary">
+                                Share
+                            </Button>
+                            <Button size="small" color="primary">
+                                Learn More
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
 
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
-                                単回帰分析
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                一番簡単な線形回帰
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <Button size="small" color="primary">
-                            Share
-                        </Button>
-                        <Button size="small" color="primary">
-                            Learn More
-                        </Button>
-                    </CardActions>
-                </Card>
+                <Grid item xs={3}>
+                    <Card className={classes.root}>
+                        <CardActionArea>
+
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    単回帰分析
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    一番簡単な線形回帰
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                            <Button size="small" color="primary">
+                                Share
+                            </Button>
+                            <Button size="small" color="primary">
+                                Learn More
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+
+                <Grid item xs={3}>
+                    <Card className={classes.root}>
+                        <CardActionArea>
+
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    単回帰分析
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    一番簡単な線形回帰
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                            <Button size="small" color="primary">
+                                Share
+                            </Button>
+                            <Button size="small" color="primary">
+                                Learn More
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
             </Grid>
         </>
     );
 }
-
-
-//             <section className='home-kind'>
-//                 <p>DB connection for big date</p>
-//                 <p>light data is no need db connection because process in only API server</p>
-//                 <p>data upload fuinction</p>
-//                 <p>show data like table with static</p>
-//                 <p>some graph</p>
-//                 <p>some analysis and create model file</p>
-//             </section>
-
-//             <section className='home-kind'>
-//                 <h2>教師あり学習</h2>
-//                 <p> aaaa </p>
-//             </section>
-
-//             <section className='home-kind'>
-//                 <h2>教師なし学習</h2>
-//                 <p> iiii </p>
-//             </section>
-
-
-//         </>
-//     )
-// }
 
 export default Home
