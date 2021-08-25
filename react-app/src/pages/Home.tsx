@@ -21,6 +21,12 @@ const Home = () => {
 
     const classes = useStyles();
 
+    const data = [
+        { title: "単回帰", discription: "簡単な回帰"},
+        { title: "単回帰2", discription: "簡単な回帰2"},
+        { title: "単回帰3", discription: "簡単な回帰3"},
+    ]
+
     return (
 
         <>
@@ -37,10 +43,10 @@ const Home = () => {
 
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                    単回帰分析
+                                    { data[0].title }
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    一番簡単な線形回帰
+                                    { data[0].discription }
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
