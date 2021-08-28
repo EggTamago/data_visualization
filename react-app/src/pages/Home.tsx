@@ -22,9 +22,9 @@ const Home = () => {
     const classes = useStyles();
 
     const data = [
-        { title: "単回帰", discription: "簡単な回帰"},
-        { title: "単回帰2", discription: "簡単な回帰2"},
-        { title: "単回帰3", discription: "簡単な回帰3"},
+        { title: "単回帰", discription: "簡単な回帰" },
+        { title: "単回帰2", discription: "簡単な回帰2" },
+        { title: "単回帰3", discription: "簡単な回帰3" },
     ]
 
     return (
@@ -43,10 +43,84 @@ const Home = () => {
 
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                    { data[0].title }
+                                    {data[0].title}
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    { data[0].discription }
+                                    {data[0].discription}
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                            <Button size="small" color="primary">
+                                Share
+                            </Button>
+                            <Button size="small" color="primary">
+                                Learn More
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+
+                <Grid item xs={3}>
+                    <Card className={classes.root}>
+                        <CardActionArea>
+
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    単回帰分析
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    一番簡単な線形回帰
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                            <Button size="small" color="primary">
+                                Share
+                            </Button>
+                            <Button size="small" color="primary">
+                                Learn More
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+
+                <Grid item xs={3}>
+                    <Card className={classes.root}>
+                        <CardActionArea>
+
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    単回帰分析
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    一番簡単な線形回帰
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                            <Button size="small" color="primary">
+                                Share
+                            </Button>
+                            <Button size="small" color="primary">
+                                Learn More
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+            </Grid>
+
+            <Grid container spacing={1} alignItems="center" justify="center">
+                <Grid item xs={3}>
+                    <Card className={classes.root}>
+                        <CardActionArea>
+
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    {data[0].title}
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    {data[0].discription}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
